@@ -1,0 +1,29 @@
+{
+  "name": "jquery-transform",
+  "title": "jQuery Transform",
+  "description": "a simple plugin to ease access to CSS3 transformations",
+  "version": "0.1.0",
+  "homepage": "https://github.com/eranation/jquery-transform",
+  "author": {
+    "name": "Eran Medan",
+    "email": "eran.medan@gmail.com",
+    "url": "www.eranmedan.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eranation/jquery-transform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eranation/jquery-transform/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/eranation/jquery-transform/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "1.9"
+  },
+  "keywords": []
+}
