@@ -4,7 +4,8 @@
   /*
    * Base function for all transformations
    */
-  function base(property, transformer, params) {
+
+  var base = function(property, transformer, params) {
 
     var value = $.map(params, function (item, index) {
       return transformer.call(this, item);
@@ -34,7 +35,8 @@
       param += suffix;
     }        
     return param;
-  };
+  }
+
   function toDeg(param){
     return suffixNumber(param, "deg");
   }
@@ -51,15 +53,15 @@
     return suffixNumber(param, "");
   }
 
- /*
-  * The plugin's outer world functions
-  */
+  /*
+   * The plugin's outer world functions
+   */
 
   var functionParamTypes = {
     number:toStr,
     length:toPx,
     angle:toDeg
-  }
+  };
 
   var functionNames = [
     {
@@ -151,9 +153,7 @@
   $.each(functionNames,function(index, item){
     var name = item.name, type = item.type;
     $.fn[name] = function () {
-      return base.call(this, name, type, arguments);  
-    }
+      return base.call(this, name, type, arguments);
+    };
   });
-
-
 })(jQuery);
