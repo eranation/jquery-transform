@@ -30,11 +30,11 @@
 
   test('is chainable', 1, function() {
     // Not a bad test to run on collection methods.
-    strictEqual(this.elems.awesome(), this.elems, 'should be chaninable');
+    strictEqual(this.elems.rotate(50), this.elems, 'should be chaninable');
   });
 
-  test('is awesome', 1, function() {
-    strictEqual(this.elems.awesome().text(), 'awesomeawesomeawesome', 'should be thoroughly awesome');
+  test('is rotated 50', 1, function() {
+    strictEqual(this.elems.rotate(50).rotate(-50).css("transform"), 'rotate(50deg)', 'should rotated 50 degrees');
   });
 
   module('jQuery.awesome');
